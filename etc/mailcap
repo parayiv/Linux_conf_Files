@@ -1,0 +1,138 @@
+###############################################################################
+#
+#  MIME types and programs that process those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directory.  Entries included there will take
+#  precedence over those listed here.
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  User section follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE the
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Begins ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+text/plain; less '%s'; needsterminal
+image/gif; feh '%s'; test=test -n "$DISPLAY" ; description=GIF Image; nametemplate=%s.gif
+image/jpeg; feh '%s'; test=test -n "$DISPLAY" ; description=JPEG Image; nametemplate=%s.jpeg
+image/png; feh '%s'; test=test -n "$DISPLAY" ; description=PNG Image; nametemplate=%s.png
+image/tiff; feh '%s'; test=test -n "$DISPLAY" ; description=TIFF Image; nametemplate=%s.tiff
+image/x-portable-anymap; feh '%s'; test=test -n "$DISPLAY" ; description=PNM Image; nametemplate=%s.pnm
+image/targa; feh '%s'; test=test -n "$DISPLAY" ; description=TGA Image; nametemplate=%s.tga
+image/x-ms-bmp; feh '%s'; test=test -n "$DISPLAY" ; description=BMP Image; nametemplate=%s.bmp
+image/x-xpixmap; feh '%s'; test=test -n "$DISPLAY" ; description=XPM Image; nametemplate=%s.xpm
+image/pjpeg; feh '%s'; test=test -n "$DISPLAY" ; description=JPEG Image; nametemplate=%s.jpeg
+image/svg+xml; inkscape '%s'; description="Scalable Vector Graphics"; test=test -n "$DISPLAY"; print=inkscape --print='|lp' '%s'; edit=inkscape '%s'; compose=inkscape '%s'
+image/svg; inkscape '%s'; description="Scalable Vector Graphics"; test=test -n "$DISPLAY"; print=inkscape --print='|lp' '%s'; edit=inkscape '%s';  compose=inkscape '%s'
+image/svg+xml; false; description="Scalable Vector Graphics"; test=test -z "$DISPLAY"; print=inkscape --print='|lp' '%s'
+image/svg; false; description="Scalable Vector Graphics"; test=test -z "$DISPLAY"; print=inkscape --print='|lp' '%s'
+text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/pdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf
+application/x-pdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf
+application/x-bzpdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf.bz2
+application/x-gzpdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf.gz
+application/postscript; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ps
+application/x-bzpostscript; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ps.bz2
+application/x-gzpostscript; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ps.gz
+image/x-eps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.eps
+image/x-bzeps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.eps.bz2
+image/x-gzeps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.eps.gz
+application/x-dvi; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dvi
+application/x-gzdvi; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dvi.gz
+application/x-bzdvi; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dvi.bz2
+image/vnd.djvu; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.djvu
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+text/html; /usr/bin/iceweasel '%s'; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
+text/xml; /usr/bin/iceweasel '%s'; description=XML Text; test=test -n "$DISPLAY";  nametemplate=%s.xml
+message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
+application/x-ogg; rhythmbox '%s'; description="Ogg Vorbis audio"; test=test -n "$DISPLAY"; nametemplate=%s.ogg
+application/ogg; rhythmbox '%s'; description="Ogg Media"; test=test -n "$DISPLAY"
+audio/x-mp3; rhythmbox '%s'; description="MP3 audio"; test=test -n "$DISPLAY"; nametemplate=%s.mp3
+audio/x-scpls; rhythmbox '%s'; description="MP3 ShoutCast playlist"; test=test -n "$DISPLAY"; nametemplate=%s.pls
+audio/x-mpeg; rhythmbox '%s'; description="MP3 audio"; test=test -n "$DISPLAY"
+audio/mpeg; rhythmbox '%s'; description="MP3 audio"; test=test -n "$DISPLAY"
+audio/x-mpegurl; rhythmbox '%s'; description="Playlist"; test=test -n "$DISPLAY"; nametemplate=%s.m3u
+application/x-flac; rhythmbox '%s'; description="FLAC audio"; test=test -n "$DISPLAY"; nametemplate=%s.flac
+application/x-tar; /bin/tar tvf -; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvzf -; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
+application/x-bittorrent; transmission-gtk '%s'; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
+application/zip; unzip -l '%s'; nametemplate=%s.zip; copiousoutput
+text/plain; more '%s'; needsterminal
+application/x-cbr; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.cbr
+application/x-cbt; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.cbt
+application/x-cbz; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.cbz
+application/x-cb7; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.cb7
+text/plain; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
+text/html; /usr/bin/w3m -T text/html '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+image/tiff; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.tiff
+application/oxps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.xps
+application/vnd.ms-xpsdocument; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.xps
+text/html; /usr/bin/lynx -force_html '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+text/plain; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
+text/html; /usr/bin/w3m -I %{charset} -dump -T text/html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+application/x-shockwave-flash; gnash '%s'; test=test -n "$DISPLAY"; description=Shockwave Flash file; nametemplate=%s.swf
+application/futuresplash; gnash '%s'; test=test -n "$DISPLAY"; description=FutureSplash Flash file; nametemplate=%s.spl
+image/png;  /usr/bin/iceweasel '%s'; description=PNG Image; test=test -n "$DISPLAY";  nametemplate=%s.png
+image/jpeg;  /usr/bin/iceweasel '%s'; description=JPEG Image; test=test -n "$DISPLAY";  nametemplate=%s.jpeg
+image/gif;  /usr/bin/iceweasel '%s'; description=GIF Image; test=test -n "$DISPLAY";  nametemplate=%s.gif
+image/avs; display.im6 'avs:%s'; test=test -n "$DISPLAY"
+image/bie; display.im6 'jbig:%s'; test=test -n "$DISPLAY"
+image/x-ms-bmp; display.im6 'bmp:%s'; test=test -n "$DISPLAY"
+image/cmyk; display.im6 'cmyk:%s'; test=test -n "$DISPLAY"
+image/dcx; display.im6 'dcx:%s'; test=test -n "$DISPLAY"
+image/eps; display.im6 'eps:%s'; test=test -n "$DISPLAY"
+image/fax; display.im6 'fax:%s'; test=test -n "$DISPLAY"
+image/fits; display.im6 'fits:%s'; test=test -n "$DISPLAY"
+image/gif; display.im6 'gif:%s'; test=test -n "$DISPLAY"
+image/gray; display.im6 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display.im6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/pjpeg; display.im6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; display.im6 'miff:%s'; test=test -n "$DISPLAY"
+image/mono; display.im6 'mono:%s'; test=test -n "$DISPLAY"
+image/mtv; display.im6 'mtv:%s'; test=test -n "$DISPLAY"
+image/x-portable-bitmap; display.im6 'pbm:%s'; test=test -n "$DISPLAY"
+image/pcd; display.im6 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display.im6 'pcx:%s'; test=test -n "$DISPLAY"
+image/pdf; display.im6 'pdf:%s'; test=test -n "$DISPLAY"
+image/x-portable-graymap; display.im6 'pgm:%s'; test=test -n "$DISPLAY"
+image/pict; display.im6 'pict:%s'; test=test -n "$DISPLAY"
+image/png; display.im6 'png:%s'; test=test -n "$DISPLAY"
+image/x-portable-anymap; display.im6 'pnm:%s'; test=test -n "$DISPLAY"
+image/x-portable-pixmap; display.im6 'ppm:%s'; test=test -n "$DISPLAY"
+image/ps; display.im6 'ps:%s'; test=test -n "$DISPLAY"
+image/rad; display.im6 'rad:%s'; test=test -n "$DISPLAY"
+image/x-rgb; display.im6 'rgb:%s'; test=test -n "$DISPLAY"
+image/rgba; display.im6 'rgba:%s'; test=test -n "$DISPLAY"
+image/rla; display.im6 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display.im6 'rle:%s'; test=test -n "$DISPLAY"
+image/sgi; display.im6 'sgi:%s'; test=test -n "$DISPLAY"
+image/sun-raster; display.im6 'sun:%s'; test=test -n "$DISPLAY"
+image/targa; display.im6 'tga:%s'; test=test -n "$DISPLAY"
+image/tiff; display.im6 'tiff:%s'; test=test -n "$DISPLAY"
+image/uyvy; display.im6 'uyvy:%s'; test=test -n "$DISPLAY"
+image/vid; display.im6 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display.im6 'viff:%s'; test=test -n "$DISPLAY"
+image/x-xbitmap; display.im6 'xbm:%s'; test=test -n "$DISPLAY"
+image/x-xpixmap; display.im6 'xpm:%s'; test=test -n "$DISPLAY"
+image/x-xwindowdump; display.im6 'xwd:%s'; test=test -n "$DISPLAY"
+image/x-icon; display.im6 'icon:%s'; test=test -n "$DISPLAY"
+image/yuv; display.im6 'yuv:%s'; test=test -n "$DISPLAY"
+text/html; /usr/bin/lynx -dump -force_html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+text/*; less '%s'; needsterminal
+text/*; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
+text/*; more '%s'; needsterminal
+text/*; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
+application/x-debian-package; /usr/lib/mime/debian-view '%s'; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb

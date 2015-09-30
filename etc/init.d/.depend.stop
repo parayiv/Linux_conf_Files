@@ -1,0 +1,18 @@
+TARGETS = unattended-upgrades vmware-tools-thinprint samba apache2 openbsd-inetd atd isc-dhcp-server speech-dispatcher smartmontools vsftpd bluetooth exim4 pulseaudio gdm3 postfix saned urandom nfs-kernel-server minissdpd alsa-utils spamassassin network-manager dovecot avahi-daemon winbind sendsigs rsyslog umountnfs.sh rpcbind nfs-common hwclock.sh networking vmware-tools umountfs umountroot halt reboot
+spamassassin: postfix exim4
+network-manager: pulseaudio
+dovecot: postfix
+avahi-daemon: saned
+winbind: dovecot
+sendsigs: alsa-utils winbind pulseaudio bluetooth openbsd-inetd atd minissdpd gdm3 unattended-upgrades isc-dhcp-server dovecot spamassassin postfix exim4 nfs-kernel-server saned network-manager samba speech-dispatcher apache2 avahi-daemon
+rsyslog: winbind pulseaudio bluetooth openbsd-inetd atd sendsigs isc-dhcp-server dovecot postfix exim4 saned network-manager speech-dispatcher apache2 avahi-daemon smartmontools vsftpd
+umountnfs.sh: alsa-utils winbind pulseaudio bluetooth openbsd-inetd atd minissdpd gdm3 rsyslog sendsigs unattended-upgrades isc-dhcp-server dovecot spamassassin postfix exim4 nfs-kernel-server saned network-manager samba speech-dispatcher apache2 avahi-daemon
+rpcbind: umountnfs.sh nfs-kernel-server
+nfs-common: umountnfs.sh nfs-kernel-server
+hwclock.sh: atd rsyslog nfs-kernel-server nfs-common
+networking: winbind umountnfs.sh isc-dhcp-server dovecot postfix exim4 samba rpcbind apache2
+vmware-tools: networking
+umountfs: alsa-utils winbind urandom umountnfs.sh pulseaudio bluetooth openbsd-inetd atd minissdpd networking gdm3 vmware-tools unattended-upgrades isc-dhcp-server dovecot spamassassin postfix exim4 nfs-kernel-server saned hwclock.sh network-manager samba rpcbind speech-dispatcher apache2 avahi-daemon
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

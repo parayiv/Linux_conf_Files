@@ -1,0 +1,17 @@
+
+[connection]
+id=Wired connection 1
+uuid=96cba978-41c4-4e85-b3ca-5bbeed457923
+type=802-3-ethernet
+
+[802-3-ethernet]
+mac=00:0C:29:60:92:A6
+
+[ipv4]
+method=manual
+dns=192.168.1.1;
+addresses1=192.168.1.10;24;192.168.1.1;
+
+[ipv6]
+method=auto
+ip6-privacy=2

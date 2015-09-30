@@ -1,0 +1,5 @@
+[Icon Theme]
+Name = Comix Cursor LH Black Regular Bold
+Comment = The left-handed Comix Cursors - Black Regular Bold
+Example = default
+Inherits = ComixCursors-LH-Black-Regular

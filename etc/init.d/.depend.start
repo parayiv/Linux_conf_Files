@@ -1,0 +1,32 @@
+TARGETS = vmware-tools-thinprint rsyslog samba motd killprocs binfmt-support sudo apache2 winbind dbus openbsd-inetd atd isc-dhcp-server spamassassin speech-dispatcher smartmontools vsftpd rsync anacron acpid cron ssh network-manager bluetooth dovecot exim4 avahi-daemon pulseaudio gdm3 postfix saned bootlogs single rpcbind nfs-common nfs-kernel-server minissdpd rmnologin rc.local
+INTERACTIVE = apache2
+apache2: rsyslog
+winbind: rsyslog samba
+dbus: rsyslog
+openbsd-inetd: rsyslog
+atd: rsyslog
+isc-dhcp-server: rsyslog
+spamassassin: rsyslog
+speech-dispatcher: rsyslog
+smartmontools: rsyslog
+vsftpd: rsyslog
+rsync: rsyslog
+anacron: rsyslog
+acpid: rsyslog
+cron: rsyslog
+ssh: rsyslog
+network-manager: dbus rsyslog
+bluetooth: rsyslog dbus
+dovecot: rsyslog winbind
+exim4: rsyslog spamassassin
+avahi-daemon: dbus rsyslog
+pulseaudio: rsyslog network-manager
+gdm3: dbus network-manager acpid
+postfix: rsyslog spamassassin dovecot
+saned: rsyslog dbus avahi-daemon
+bootlogs: gdm3
+single: killprocs bootlogs motd
+nfs-kernel-server: nfs-common rpcbind
+minissdpd: vmware-tools-thinprint winbind rsyslog samba rpcbind nfs-common pulseaudio network-manager bluetooth dbus openbsd-inetd atd gdm3 isc-dhcp-server dovecot spamassassin postfix exim4 nfs-kernel-server saned avahi-daemon speech-dispatcher apache2 bootlogs motd smartmontools vsftpd rsync anacron binfmt-support acpid sudo cron ssh
+rmnologin: sudo vmware-tools-thinprint winbind rsyslog samba rpcbind nfs-common pulseaudio network-manager bluetooth dbus openbsd-inetd atd gdm3 isc-dhcp-server dovecot spamassassin postfix exim4 nfs-kernel-server saned avahi-daemon speech-dispatcher apache2 bootlogs motd smartmontools vsftpd rsync anacron binfmt-support acpid cron ssh
+rc.local: vmware-tools-thinprint winbind rsyslog samba rpcbind nfs-common pulseaudio network-manager bluetooth dbus openbsd-inetd atd gdm3 isc-dhcp-server dovecot spamassassin postfix exim4 nfs-kernel-server saned avahi-daemon speech-dispatcher apache2 bootlogs motd smartmontools vsftpd rsync anacron binfmt-support acpid sudo cron ssh

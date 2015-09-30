@@ -1,0 +1,9 @@
+#include
+printf
+scanf
+sscanf
+fgets
+gets
+getchar()
+putchar()
+

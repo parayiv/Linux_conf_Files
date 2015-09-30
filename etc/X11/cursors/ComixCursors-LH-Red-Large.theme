@@ -1,0 +1,5 @@
+[Icon Theme]
+Name = Comix Cursor LH Red Large Bold
+Comment = The left-handed Comix Cursors - Red Large Bold
+Example = default
+Inherits = ComixCursors-LH-Red-Large

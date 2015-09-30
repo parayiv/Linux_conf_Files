@@ -1,0 +1,29 @@
+deb http://http.debian.net/debian stable main
+
+deb http://http.debian.net/debian wheezy-backports main
+
+deb http://http.debian.net/debian-backports squeeze-backports main
+
+##stable
+
+deb http://ftp.debian.org/debian/ etch main
+deb-src http://ftp.debian.org/debian/ etch main
+
+deb http://security.debian.org/ etch/updates main contrib
+deb-src http://security.debian.org/ etch/updates main contrib
+
+deb http://debian.uchicago.edu/debian/ etch main contrib non-free
+deb-src http://debian.uchicago.edu/debian/ etch main contrib non-free
+
+deb http://www.debian-multimedia.org etch main
+deb http://www.debian-multimedia.org stable main
+deb-src http://www.debian-multimedia.org/ etch main
+
+deb http://ftp.us.debian.org/debian stable main contrib non-free
+deb-src http://ftp.us.debian.org/debian stable main contrib non-free
+deb http://non-us.debian.org/debian-non-US stable/non-US main contrib non-free
+deb-src http://non-us.debian.org/debian-non-US stable/non-US main contrib non-free
+deb http://ftp.debian-unofficial.org/debian stable main contrib non-free restricted
+deb-src http://ftp.debian-unofficial.org/debian stable main contrib non-free restricted
+
+deb http://http.us.debian.org/debian/ wheezy contrib non-free

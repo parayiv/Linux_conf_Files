@@ -1,0 +1,19 @@
+127.0.0.1	localhost
+192.168.1.10	Wolf.internal		wolf
+192.168.1.10	Wolf.internal		debian
+
+192.168.1.20	Fedora.interal		fedora
+192.168.1.20	Fedora.interal		tunis
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+#====================================
+# Added by parayiv for APACHE TESTING 
+192.168.1.10	www.example1.org	parayiv
+192.168.1.10	www.example2.com	gauss
+
+#====================================

@@ -1,0 +1,28 @@
+[color]
+	ui = true
+[user]
+	name = parayiv
+	email = parayiv@gmailcom
+
+# # Git usefull command
+# git config --global user.name "..."
+# git config --global user.email "..."
+# 
+# git config --global core.editor vim
+# 
+# git config --global color.ui true
+# # Create ALIAS
+# git config --global alias.st status 
+# git remote -v
+# git remote add origin https://...
+# 
+# git log --oneline --graph --all --decorate
+# 
+# # REVERT only one file
+# git checkout -- fileNme.txt
+# 
+# # RENAME BRANCH
+# git branch -m News Features # mv
+# 
+# # DELETE BRANCH
+# git branch -d/D News        # -D: force delete
